@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TVq-oG-1wL"/>
+                        <viewControllerLayoutGuide type="bottom" id="q12-KC-B22"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyY-FD-LDL">
+                                <rect key="frame" x="89" y="205" width="142" height="30"/>
+                                <state key="normal" title="检测版本更新,自带UI"/>
+                                <connections>
+                                    <action selector="checkVersionBtnDidClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bz-Ic-7HA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-OK-C0o">
+                                <rect key="frame" x="66" y="297" width="188" height="30"/>
+                                <state key="normal" title="检测版本更新,需要自定义UI"/>
+                                <connections>
+                                    <action selector="checkVersionCustomBtnDidClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Di5-Xa-cSJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg5-3Y-QXw">
+                                <rect key="frame" x="43" y="251" width="234" height="30"/>
+                                <state key="normal" title="检测版本更新,自带UI（强制更新）"/>
+                                <connections>
+                                    <action selector="checkVersionCompulsoryBtnDidClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HD-Ku-NSa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App内更新：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS6-L3-VPy">
+                                <rect key="frame" x="20" y="84" width="89" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   销售地区：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYw-Ol-foZ">
+                                <rect key="frame" x="20" y="122" width="88.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="cn" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRp-Kt-hV7">
+                                <rect key="frame" x="108.5" y="116" width="191.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="salesAreaTextFieldEditingChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="fzh-gC-kDO"/>
+                                </connections>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KE2-qU-smm">
+                                <rect key="frame" x="109" y="78" width="51" height="31"/>
+                                <connections>
+                                    <action selector="openAppstoreSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="QJb-1v-HmG"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fRp-Kt-hV7" firstAttribute="leading" secondItem="hYw-Ol-foZ" secondAttribute="trailing" id="0AY-an-E3m"/>
+                            <constraint firstItem="hyY-FD-LDL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-64" id="0rA-Ff-PTK"/>
+                            <constraint firstItem="KE2-qU-smm" firstAttribute="centerY" secondItem="VS6-L3-VPy" secondAttribute="centerY" id="4DS-SJ-PfB"/>
+                            <constraint firstItem="hyY-FD-LDL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdp-qV-mvy"/>
+                            <constraint firstItem="hYw-Ol-foZ" firstAttribute="top" secondItem="VS6-L3-VPy" secondAttribute="bottom" constant="20" id="F7c-K2-b8Z"/>
+                            <constraint firstItem="O3m-OK-C0o" firstAttribute="top" secondItem="yg5-3Y-QXw" secondAttribute="bottom" constant="16" id="JNj-PD-B4m"/>
+                            <constraint firstItem="VS6-L3-VPy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="OVU-6k-b01"/>
+                            <constraint firstItem="yg5-3Y-QXw" firstAttribute="centerX" secondItem="hyY-FD-LDL" secondAttribute="centerX" id="SPJ-r2-pEr"/>
+                            <constraint firstAttribute="trailing" secondItem="fRp-Kt-hV7" secondAttribute="trailing" constant="20" id="Tyy-sF-WHJ"/>
+                            <constraint firstItem="hYw-Ol-foZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="WQr-Sm-8ef"/>
+                            <constraint firstItem="yg5-3Y-QXw" firstAttribute="top" secondItem="hyY-FD-LDL" secondAttribute="bottom" constant="16" id="g8R-dC-o2i"/>
+                            <constraint firstItem="fRp-Kt-hV7" firstAttribute="centerY" secondItem="hYw-Ol-foZ" secondAttribute="centerY" id="k0c-xe-1ai"/>
+                            <constraint firstItem="VS6-L3-VPy" firstAttribute="top" secondItem="TVq-oG-1wL" secondAttribute="bottom" constant="64" id="p5R-T7-ifS"/>
+                            <constraint firstItem="KE2-qU-smm" firstAttribute="leading" secondItem="VS6-L3-VPy" secondAttribute="trailing" id="rha-GO-KBh"/>
+                            <constraint firstItem="O3m-OK-C0o" firstAttribute="centerX" secondItem="hyY-FD-LDL" secondAttribute="centerX" id="sVt-it-LEN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="openAppStoreInAppSwitch" destination="KE2-qU-smm" id="8Yr-Dl-Yim"/>
+                        <outlet property="salesAreaTextField" destination="fRp-Kt-hV7" id="AUh-1Y-VE8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
