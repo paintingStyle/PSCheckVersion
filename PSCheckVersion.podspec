@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "PSCheckVersion"
-s.version      = "0.1.2"
+s.version      = "0.1.0"
 s.summary      = "一键检测App更新，并附带UI可直接使用"
 
 s.homepage     = "https://github.com/paintingStyle/PSCheckVersion"
