@@ -1,5 +1,5 @@
 # PSCheckVersion
-支持App一键更新，并附带UI可直接使用
+支持App一键更新/强制更新，并附带UI可直接使用
 
 ![image](https://github.com/paintingStyle/PSCheckVersion/blob/master/example.gif)
 
