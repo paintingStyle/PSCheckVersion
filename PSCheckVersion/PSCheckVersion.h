@@ -16,12 +16,12 @@ typedef void(^completeBlock) (PSAppInfo *info, NSError *error);
 + (PSCheckVersion *)shardInstance;
 
 /**
- 在App内打开(此方式存在延迟，请求苹果服务器完成才能显示弹框)
+ 在App内打开(此方式存在延迟，请求苹果服务器完成才能显示弹框)，Defult:NO
  */
 @property (nonatomic, assign) BOOL openAppStoreInApp;
 
 /**
- 如检测到不是最新版本，可设置销售地区，默认为cn，一般情况不用设置
+ 如检测到不是最新版本可设置销售地区，一般情况不用设置，Defult:cn
  */
 @property (nonatomic, copy) NSString *salesArea;
 
